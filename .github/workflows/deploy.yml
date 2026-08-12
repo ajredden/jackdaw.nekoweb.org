@@ -3,13 +3,19 @@ on:
   push:
     branches:
       - deploy
+
 jobs:
   deploy_to_nekoweb:
     name: Deploy to Nekoweb
     runs-on: ubuntu-slim
     steps:
+      - name: Checkout repo's deploy branch
+        uses: ajredden/jackdaw.nekoweb.org@deploy
       - name: Install dependencies
-        run: npm install
+        run: | 
+          pwd
+          ls -l
+          npm install
       - name: Build
         run: npm run build
       - name: (Placeholder) list directory
