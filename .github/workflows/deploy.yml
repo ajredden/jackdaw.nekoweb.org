@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Install dependencies
-        run: npm install
+        run: | 
+          pwd
+          ls -l
+          npm install
       - name: Build
         run: npm run build
       - name: (Placeholder) list directory
