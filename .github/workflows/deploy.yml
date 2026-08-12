@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Checkout repo's deploy branch
         run: |
-          git clone github.com/ajredden/jackdaw.nekoweb.org
+          git clone https://github.com/ajredden/jackdaw.nekoweb.org.git
           git checkout deploy
       - name: Install dependencies
         run: | 
