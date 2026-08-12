@@ -3,9 +3,7 @@ on:
   push:
     branches:
       - deploy
-defaults:
-  run:
-    working-directory: /home/runner/work/jackdaw.nekoweb.org
+
 jobs:
   deploy_to_nekoweb:
     name: Deploy to Nekoweb
