@@ -1,0 +1,64 @@
+---
+title: Jackdaw's Cyber Space
+---
+
+<!doctype html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+        
+        {% if (page.inputPath | split(".") | last) == "md" %}
+            <script src="/js/include/prismjs/prism.js"></script>
+            <script src="/js/include/prismjs/plugins/autoloader/prism-autoloader.js"></script>
+            <script src="/js/include/prismjs/plugins/line-numbers/prism-line-numbers.js"></script>
+            <script src="/js/include/prismjs/plugins/toolbar/prism-toolbar.js"></script>
+            <script src="/js/include/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js"></script>
+            <script src="/js/include/prismjs/plugins/show-language/prism-show-language.js"></script>
+        
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css" />
+            <link rel="stylesheet" href="/css/include/dracula-prism/dracula-prism.css" type="text/css" />
+            <link rel="stylesheet" href="/css/include/prismjs/plugins/line-numbers/prism-line-numbers.css" type="text/css" />
+        {% endif %}
+        
+        <link href="/css/base.css"    rel="stylesheet" type="text/css" />
+        <link href="/css/cursors.css" rel="stylesheet" type="text/css" />
+        
+        <title>{{ title }}</title>
+    </head>
+    
+    <body class="line-numbers">
+        <header>
+            <div class="flexbox-header">
+                <a href="/">
+                    <img class="centre" 
+                        src="/assets/img/banner-wip.png" 
+                        alt="Welcome to Jackdaw's Cyber Space!" 
+                        title="Welcome to Jackdaw's Cyber Space!" 
+                        width=600
+                        height=150 
+                    />
+                </a>
+            </div>
+        </header>
+
+        <main class="flexbox-background">
+            <aside class="nav-sidebar">
+                <nav>
+                    <table class="nav-table">
+                        <tr><td class="nav-link"><a href="/">Home</a></td></tr>
+                        <tr><td class="nav-link"><a href="/blog/index.html">Blog</a></td></tr>
+                        <tr><td class="nav-link"><a href="/about.html">About</a></td></tr>
+                        <tr><td class="nav-link"><a href="/guestbook.html">Guestbook</a></td></tr>                    
+                    </table>
+                </nav>
+            </aside>
+        
+            <div class="flexbox-foreground">
+                {{ content | safe }}
+            </div>
+        </main>
+    </body>
+</html>

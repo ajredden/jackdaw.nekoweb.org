@@ -1,0 +1,114 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+:root
+{
+    scrollbar-color: #6c9fbb #a958ab;
+    background-color: #DD71DE;
+    background-image: url("/assets/img/pink-plaid.jpg");
+}
+
+body
+{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+code[class*="language-"]
+{
+    font-family: "Fira Code", PT Mono, Consolas, Monaco, "Andale Mono", 
+    "Ubuntu Mono", monospace;
+}
+
+
+.nav-sidebar
+{
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: #88CCF1;
+    background-image:
+        radial-gradient(circle at 10px 10px, rgba(255,255,255,0.4) 10%, transparent 10%),
+        radial-gradient(circle at 40px 40px, rgba(255,255,255,0.4) 10%, transparent 10%);
+    background-size: 60px 60px;
+    border-style: dotted;
+    border-width: thick;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px 10px darkslategrey;
+    transition: box-shadow .4s linear,
+                translate .2s linear;
+}
+
+.nav-table
+{
+    margin: 10px;
+}
+
+.nav-link
+{
+    padding: 5px 10px;
+    border-left-style: none;
+    border-bottom-style: solid;
+    border-bottom-color: #689bb7;
+    border-bottom-style: groove;
+}
+
+.nav-link > a
+{
+    display: block;
+    color: white;
+    text-decoration-line: none;
+}
+
+.nav-link:hover
+{
+    background-color: lightgrey;
+}
+
+.flexbox-header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.flexbox-foreground
+{
+    margin-top: 20px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #88CCF1;
+    background-image:
+        radial-gradient(circle at 10px 10px, rgba(255,255,255,0.4) 10%, transparent 11%),
+        radial-gradient(circle at 40px 40px, rgba(255,255,255,0.4) 10%, transparent 11%);
+    background-size: 60px 60px;
+    width: 85vw;
+    height: 95vh;
+    border-style: dotted;
+    border-width: thick;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px 10px darkslategrey;
+    transition: box-shadow .4s linear,
+                translate .2s linear;
+}
+
+.flexbox-foreground:hover, .nav-sidebar:hover
+{
+    box-shadow: none;
+    translate: 5px 5px;
+}
+
+.flexbox-background
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100vh;
+}

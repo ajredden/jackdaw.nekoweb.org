@@ -1,0 +1,16 @@
+name: Deploy to Nekoweb
+on:
+  push:
+    branches:
+      - deploy
+jobs:
+  deploy_to_nekoweb:
+    name: Deploy to Nekoweb
+    runs-on: ubuntu-slim
+    steps:
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: (Placeholder) list directory
+        run: ls -l prod/

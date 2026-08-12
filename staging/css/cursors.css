@@ -1,0 +1,29 @@
+@keyframes cursor-link-animation 
+{
+    0%, 7.14%, 100% { cursor: url("/assets/cursor/pointer/intface-link-F1.png"),  pointer; }
+    7.14%, 14.29%   { cursor: url("/assets/cursor/pointer/intface-link-F2.png"),  pointer; }
+    14.29%, 21.43%  { cursor: url("/assets/cursor/pointer/intface-link-F2.png"),  pointer; }
+    21.43%, 28.57%  { cursor: url("/assets/cursor/pointer/intface-link-F3.png"),  pointer; }
+    28.57%, 35.71%  { cursor: url("/assets/cursor/pointer/intface-link-F4.png"),  pointer; }
+    35.71%, 42.86%  { cursor: url("/assets/cursor/pointer/intface-link-F5.png"),  pointer; }
+    42.86%, 50.00%  { cursor: url("/assets/cursor/pointer/intface-link-F6.png"),  pointer; }
+    50.00%, 57.14%  { cursor: url("/assets/cursor/pointer/intface-link-F7.png"),  pointer; }
+    57.14%, 64.29%  { cursor: url("/assets/cursor/pointer/intface-link-F8.png"),  pointer; }
+    64.29%, 71.43%  { cursor: url("/assets/cursor/pointer/intface-link-F9.png"),  pointer; }
+    71.43%, 78.57%  { cursor: url("/assets/cursor/pointer/intface-link-F10.png"), pointer; }
+    78.57%, 85.71%  { cursor: url("/assets/cursor/pointer/intface-link-F11.png"), pointer; }
+    85.71%, 92.86%  { cursor: url("/assets/cursor/pointer/intface-link-F12.png"), pointer; }
+    92.86%, 99.99%  { cursor: url("/assets/cursor/pointer/intface-link-F13.png"), pointer; }
+}
+
+:root
+{
+    cursor:
+        url("/assets/cursor/default/intface-default.png"),
+        default;
+}
+
+a
+{
+    animation: cursor-link-animation 2.167s linear infinite forwards;
+}
