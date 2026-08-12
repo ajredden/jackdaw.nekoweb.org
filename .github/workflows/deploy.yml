@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Install dependencies
+        uses: ajredden/jackdaw.github.io@deploy
         run: | 
           pwd
           ls -l
