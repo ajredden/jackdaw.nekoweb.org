@@ -9,8 +9,9 @@ jobs:
     name: Deploy to Nekoweb
     runs-on: ubuntu-slim
     steps:
-      - name: Install dependencies
+      - name: Checkout repo's deploy branch
         uses: ajredden/jackdaw.github.io@deploy
+      - name: Install dependencies
         run: | 
           pwd
           ls -l
