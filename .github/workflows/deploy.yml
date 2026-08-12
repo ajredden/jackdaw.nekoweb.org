@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Checkout repo's deploy branch
-        uses: ajredden/jackdaw.github.io@deploy
+        uses: ajredden/jackdaw.nekoweb.org@deploy
       - name: Install dependencies
         run: | 
           pwd
