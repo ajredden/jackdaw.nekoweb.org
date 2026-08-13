@@ -28,7 +28,7 @@ jobs:
         run: |
           for file in "prod/*"; 
           do
-              echo $file
+              echo "$file"
               [ -f "$file" ] || continue
               filename=$(basename "$file")
 
