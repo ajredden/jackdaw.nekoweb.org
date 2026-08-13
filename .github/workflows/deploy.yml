@@ -32,6 +32,6 @@ jobs:
 
             curl -H "Authorization: $NEKOWEB_API_KEY" \
               -F "pathname=jackdaw.nekoweb.org/" \
-              -F "files=@${filename}" \
+              -F "files=@prod/${filename}" \
               "https://nekoweb.org/api/files/upload"
           done
