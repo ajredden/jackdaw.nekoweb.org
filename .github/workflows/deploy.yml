@@ -28,12 +28,11 @@ jobs:
         run: |
           for file in prod/*; 
           do
-            [ -f "$file" ] || continue
             filename=$(basename "$file")
             echo "$filename"
 
             curl -H "Authorization: $NEKOWEB_API_KEY" \
-              -F "pathname=." \
-              -F "files=\@${filename}" \
+              -F "pathname=jackdaw.nekoweb.org" \
+              -F "files=@prod/${filename}" \
               "https://nekoweb.org/api/files/upload"
           done
