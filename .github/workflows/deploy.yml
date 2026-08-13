@@ -28,9 +28,9 @@ jobs:
         run: |
           for file in "prod/*"; 
           do
-              echo "$file"
               [ -f "$file" ] || continue
               filename=$(basename "$file")
+              echo "$filename"
 
               curl -H "Authorization: $NEKOWEB_API_KEY" \
               -F "pathname=." \
