@@ -22,3 +22,20 @@ jobs:
         run: npm run build
       - name: (Placeholder) list directory
         run: ls -l prod/
+      - name: Deploy
+        env:
+          NEKOWEB_API_KEY: $ {{ secrets.NEKOWEB_API_KEY }}
+        run: |
+          for file in "prod/*; 
+          do
+              [ -f "$file" ] || continue
+              filename=$(basename "$file")
+
+              curl -H "Authorization: $NEKOWEB_API_KEY" \
+              -F "pathname=$filename" \
+              https://nekoweb.org/api/files/upload
+          done
+
+# 'curl -H "Authorization: $NEKOWEB_API_KEY" \
+#                   -F "pathname=@prod/" \
+#                   https://nekoweb.org/api/files/upload'
