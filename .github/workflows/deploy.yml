@@ -32,6 +32,7 @@ jobs:
               filename=$(basename "$file")
 
               curl -H "Authorization: $NEKOWEB_API_KEY" \
-              -F "pathname=$filename" \
+              -F "pathname=." \
+              -F "files=@filename"
               https://nekoweb.org/api/files/upload
           done
