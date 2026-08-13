@@ -7,7 +7,7 @@ on:
 jobs:
   deploy_to_nekoweb:
     name: Deploy to Nekoweb
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repo's deploy branch
         uses: actions/checkout@v3
@@ -34,6 +34,6 @@ jobs:
 
             curl -H "Authorization: $NEKOWEB_API_KEY" \
               -F "pathname=." \
-              -F "files=@${file}" \
+              -F "files=\@${file}" \
               "https://nekoweb.org/api/files/upload"
           done
