@@ -26,7 +26,7 @@ jobs:
         env:
           NEKOWEB_API_KEY: $ {{ secrets.NEKOWEB_API_KEY }}
         run: |
-          for file in "prod/*; 
+          for file in "prod/*"; 
           do
               [ -f "$file" ] || continue
               filename=$(basename "$file")
@@ -35,7 +35,3 @@ jobs:
               -F "pathname=$filename" \
               https://nekoweb.org/api/files/upload
           done
-
-# 'curl -H "Authorization: $NEKOWEB_API_KEY" \
-#                   -F "pathname=@prod/" \
-#                   https://nekoweb.org/api/files/upload'
