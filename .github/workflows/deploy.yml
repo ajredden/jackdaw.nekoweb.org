@@ -26,13 +26,12 @@ jobs:
         env:
           NEKOWEB_API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
         run: |
-          for file in prod/*; 
+          for filename in $(find prod -type f -printf '%P\n'); 
           do
-            filename=$(basename "$file")
             echo "$filename"
 
             curl -H "Authorization: $NEKOWEB_API_KEY" \
-              -F "pathname=jackdaw.nekoweb.org" \
-              -F "files=@prod/${filename}" \
+              -F "pathname=jackdaw.nekoweb.org/" \
+              -F "files=@${filename}" \
               "https://nekoweb.org/api/files/upload"
           done
